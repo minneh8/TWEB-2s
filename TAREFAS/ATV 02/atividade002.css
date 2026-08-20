@@ -24,6 +24,7 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
+    background-color: lightgray;
 }
 
 .cabecalho img {
@@ -32,9 +33,90 @@ body {
     width: 220px;
     height: 270px;
     object-fit: cover;
+
 }
 
 .informacoes {
     display: flex;
     flex-direction: column;
+}
+.objetivos, .exProf, .formAcad, .skills {     
+    width: 93%; 
+    margin: 10px auto; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    background-color: #fffaf0; 
+    box-sizing: border-box; 
+    background-color: lightgray;
+}
+
+.title {
+    width: 100%; 
+    margin: 10px auto; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    background-color: #fffaf0; 
+    box-sizing: border-box; 
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 35px;
+
+}
+
+.emp {
+    width: 50%; 
+    margin: 10px auto; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    background-color: #fffaf0; 
+    box-sizing: border-box; 
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    color: grey;
+}
+
+.inf { 
+    width: 80%; 
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    background-color: #fffaf0; 
+    box-sizing: border-box; 
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.objetivos h3, .expProf h3, .formAcad h3, .hardSkills h3, .softSkills h3 { 
+    margin: 0 0 8px 0; 
+}
+
+.expProf ul { 
+    margin: 0; 
+    padding-left: 20px; 
+}
+
+.expProf li { 
+    margin-bottom: 10px; 
+}
+
+.formAcad h4 { 
+    margin: 0 0 5px 0; 
+}
+
+.hardSkills ul, .softSkills ul { 
+    margin: 0; 
+    padding-left: 20px;
+}
+
+.hardSkills li, .softSkills li { 
+    margin-bottom: 5px; 
 }
