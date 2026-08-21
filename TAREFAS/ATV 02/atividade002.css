@@ -51,6 +51,10 @@ body {
     background-color: lightgray;
 }
 
+
+
+
+
 .title {
     width: 100%; 
     margin: 10px auto; 
@@ -112,11 +116,75 @@ body {
     margin: 0 0 5px 0; 
 }
 
-.hardSkills ul, .softSkills ul { 
-    margin: 0; 
-    padding-left: 20px;
+.facul {
+    width: 80%; 
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    background-color: #fffaf0; 
+    box-sizing: border-box; 
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.hardSkills li, .softSkills li { 
-    margin-bottom: 5px; 
+.facul h5, h4 {
+    font-size: larger;
+    color: gray;
+}
+
+.skills ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 40px;
+    list-style-type: disc;
+}
+
+.skills li {
+    margin-bottom: 5px;
+    display: list-item;
+}
+
+.topicos {
+    width: 80%; 
+    padding: 10px;
+    margin: auto;
+    border: 1px solid #ccc; 
+    border-radius: 20px; 
+    background-color: #fffaf0; 
+    box-sizing: border-box; 
+    color: gray;
+}
+
+footer { 
+    width: auto;
+    height: 40px; 
+    margin: auto; 
+    margin-top: auto;
+    padding: 5px;
+    border: 1px solid #ccc; 
+    background-color: #fffaf0; 
+    box-sizing: border-box; 
+    display: flex;  
+    text-align: center;
+    justify-content: center;
+    font-size: 15px;
+    color: black;
+    background-color: darkgrey;
+}
+
+footer p {
+    display: inline;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+}
+
+footer a {
+    color: darkblue;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
 }
