@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="formularios.css">
+</head>
+<body>
+
+    <form>
+        <label for="nome_id">Nome: </label>
+        <input type="text" name="Nome" id="nome_id" 
+            placeholder="Digite o seu nome completo" disabled>
+
+        <label for="busca_id">Busca: </label>
+        <input type="search" name="busca" id="busca_id">
+
+        <label for="idade_id">Idade: </label>
+        <input type="number" name="idade" id="idade_id" min="18" max="100" step="2">
+        
+        <label for="qtde_id">Quantidade: </label>
+        <input type="range" name="quantidade" id="qtde_id" min="18" max="100" step="2">
+        
+        <label for="email_id">Email: </label>
+        <input type="email" name="email" id="email_id">
+
+        <label for="telefone_id">Telefone: </label>
+        <input type="tel" name="telefone" id="telefone_id">
+
+        <label for="link_id">Link: </label>
+        <input type="url" name="link" id="link_id">
+
+        <label for="data_id">Data: </label>
+        <input type="date" name="data" id="data_id">
+
+        <label for="dataHora_id">Data e Hora: </label>
+        <input type="datetime-local" name="dataHora" id="dataHora_id">
+
+        <label for="mes_id">Mês: </label>
+        <input type="month" name="mês" id="mes_id">
+
+        <label for="mes_id">Semana: </label>
+        <input type="week" name="semana" id="semana_id">
+
+        <label for="senha_id">Senha: </label>
+        <input type="password" name="senha" id="senha_id">
+
+        <label for="texto_id">Text: </label>
+        <textarea id="texto_id" name="texto" rows="5" cols="50" maxlength="200">
+            Meu texto
+        </textarea>
+
+        <label for="check1">
+        <input type="checkbox" id="check1" value="Valor 1" name="Grupo 1">
+        Sim
+        </label>
+
+        <label for="opcaoSim_id">
+            <input type="radio" id="opcaoSim_id" value="Sim" name="Resposta" checked>
+            Sim
+        </label>
+        <label for="opcaoNao_id">
+            <input type="radio" id="opcaoNao_id" value="Nao" name="Resposta">
+            Não
+        </label>
+        <label for="opcaoTalvez_id">
+            <input type="radio" id="opcaoTalvez_id" value="Talvez" name="Resposta">
+            Talvez
+        </label>
+        
+        <label for="cor_id">Cor: </label>
+        <input type="color" name="cor" id="cor_id">
+
+        <label for="estados_id">Estados: </label>
+        <select id="estados_id" name="Estados">
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="ES">Espirito Santo</option>
+        </select>
+
+        <label for="estados_id">Estados: </label>
+        <select id="estados_id" name="Estados" multiple>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="ES">Espirito Santo</option>
+        </select>
+
+        <label for="estados_id">Estados: </label>
+        <select id="estados_id" name="Estados">
+            <optgroup label="Região Sudeste">
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="ES">Espirito Santo</option>
+            </optgroup>
+            <optgroup label="Região Sul">
+                <option value="PR">Paraná</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="RS">Rio Grande do Sul</option>
+            </optgroup>
+        </select>
+
+        <datalist id="comidas_id">
+            <option value="Lasanha" ></option>
+            <option value="Pizza" ></option>
+            <option value="Sopa"></option>
+            <option value="Salada"></option>
+        </datalist>
+        <label for="comidas_id">Comida: </label>
+        <input type="text" name="comida" id="comida_id" list="comidas_id">
+        
+        <input id="botaoEnviar_id" type="submit" value="Enviar">
+        <input id="botaoreset_id" type="reset" value="Reiniciar">
+
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <input id="botaoEnviar_id" type="submit" value="Enviar">
+        </fieldset>
+    </form>
+    
+</body>
+</html>
