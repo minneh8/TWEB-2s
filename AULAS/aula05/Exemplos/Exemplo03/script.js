@@ -124,9 +124,12 @@ formulario.addEventListener("submit", function (event) {
     //Validar Matricula
     //^ = Comeca, $ = Termina
     const formatoMatricula = /^[0-9]{8}$/
-    if (formatoMatricula.test(matricula)) {
+    if (!formatoMatricula.test(matricula)) {
         mostrarErro(campoMatricula, erroMatricula, "A matrícula deve ser exatamente 8 digitos numericos");
         formValido = false;
+    } else if (matricula === "") {
+        mostrarErro(campoMatricula, erroMatricula, "Digite sua Matricula");
+        formValido = false; 
     }
 
     //Validar Data de Nascimento 
@@ -165,4 +168,30 @@ formulario.addEventListener("submit", function (event) {
         mostrarErro(campoSenha, erroSenha, "Senha nao atende aos criterios");
         formValido = false;
     }
+
+    //Confirmar Senha
+    if (confirmacaoSenha !== senha) {
+        mostrarErro(campoConfirmacaoSenha, erroConfirmacaoSenha, "As senhas nao coincidem");
+        formValido = false;
+    } else if (confirmacaoSenha === "") {
+        mostrarErro(campoConfirmacaoSenha, erroConfirmacaoSenha, "Preencha esse campo com a senha!");
+        formValido = false;
+    }
+
+    //Campo Checkbox
+    if(!campoTermos.checked) {
+        mostrarErro(campoTermos, erroTermos, "Confirme que os dados estao corretos");
+        formValido = false;
+    }
+
+    if(!formValido) {
+        painelResultado.classList.add("d-none");
+        return
+    }
+
+    const aluno = {nome, email, matricula, dataNascimento, curso, semestre};
+
+    console.log(aluno);
+    resultado.innerText = JSON.stringify(aluno, null, 2);
+    painelResultado.classList.remove("d-none");
 });
