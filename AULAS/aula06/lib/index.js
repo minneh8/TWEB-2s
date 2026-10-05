@@ -32,6 +32,16 @@ app.get("/", (req, res) => {
     res.send("Hello World");
 });
 app.get("/alunos", (req, res) => {
+    const situacao = req.query.situacao;
+    if (situacao) {
+        const alunosFiltrados = alunos.filter((items) => {
+            return items.situacao === situacao;
+        });
+        if (!alunosFiltrados) {
+            return res.status(200).json({ mensagem: "Alunos não encontrados!" });
+        }
+        return res.status(200).json(alunosFiltrados);
+    }
     return res.status(200).json(alunos);
 });
 app.get("/alunos/:ra", (req, res) => {
