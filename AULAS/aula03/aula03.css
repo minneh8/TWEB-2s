@@ -1,0 +1,173 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f2f2f2;
+
+    margin: 0;
+
+}
+
+
+#cabecalho {
+
+    background-color: #1f4e79;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.secao {
+
+    background-color: white;
+
+    width: 900px;
+
+    margin: 30px auto;
+
+    padding: 20px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 8px;
+
+}
+
+.exemplo-block {
+    display: block;
+    width: 200px;
+    height: 40px;
+    background-color: #aed6f1;
+    border: 1px solid #2980b9;
+    margin: 10px;
+    padding: 10px;
+}
+
+.exemplo-inline {
+    display: inline;
+    background-color: #aed6f1;
+    border: 1px solid #239b56;
+    /* o inline nao respeita a altura e a largura posta */
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+}
+
+.exemplo-inline-block {
+    display: inline-block;
+    background-color: #f5b7b1;
+    border: 1px solid #c0392b;
+    width: 150px;
+    height: 60px;  
+}
+
+.item {
+    background-color: #5dade2;
+    color: white;
+    border: 1px solid #21618c;
+    padding: 20px;
+
+}
+
+.flex-basico {
+    display: flex;
+    border: 3px solid #333;
+    padding: 10px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row-reverse;
+    border: 3px solid #333;
+    padding: 10px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    /* Existe tambem o column reverse, que tem a mesma funcao do row-reverse */
+    border: 3px solid #333;
+    padding: 10px;
+}
+
+.flex-justify-center {
+    display: flex;
+    justify-content: center;
+    border: 3px solid #333;
+    padding: 10px;
+
+}
+
+.flex-justify-between {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid #333;
+    padding: 10px;
+}
+
+.flex-align  {
+    display: flex;
+    height: 200px;
+    border: 3px solid #333;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-gap {
+    display: flex;
+    border: 3px solid #333;
+    padding: 10px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    width: 200px;
+    height: 100px;
+    background-color: #ff7300;
+    border: 2px solid #d44c0d;
+    padding: 20px;
+    color: white;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.produtos {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto {
+    width: 220px;
+    background-color: #eaf2f8;
+    border: 1px solid #5dade2;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.produto h3 {
+    color: #1f4e79;
+    font-size: 24px;
+}
+
+.preco {
+    color: #117884;
+    font-size: 20px;
+    font-weight: bold;
+}

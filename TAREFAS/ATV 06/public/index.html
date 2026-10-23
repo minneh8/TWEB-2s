@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de endereço</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Cadastro de endereço</h1>
+    <p class="intro">Informe o CEP e busque para preencher rua, bairro, cidade e estado automaticamente.</p>
+
+    <form id="formEndereco" novalidate>
+      <div class="linha-cep">
+        <div class="campo">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" inputmode="numeric" maxlength="9" placeholder="01001-000" autocomplete="postal-code">
+        </div>
+        <button type="button" id="btnBuscar">Buscar CEP</button>
+      </div>
+
+      <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+
+      <div class="campo">
+        <label for="logradouro">Logradouro (Rua)</label>
+        <input type="text" id="logradouro" readonly>
+      </div>
+
+      <div class="grade">
+        <div class="campo">
+          <label for="numero">Número</label>
+          <input type="text" id="numero" autocomplete="off">
+        </div>
+        <div class="campo">
+          <label for="complemento">Complemento</label>
+          <input type="text" id="complemento" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="bairro">Bairro</label>
+        <input type="text" id="bairro" readonly>
+      </div>
+
+      <div class="grade grade-cidade">
+        <div class="campo">
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade" readonly>
+        </div>
+        <div class="campo">
+          <label for="uf">Estado (UF)</label>
+          <input type="text" id="uf" readonly>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

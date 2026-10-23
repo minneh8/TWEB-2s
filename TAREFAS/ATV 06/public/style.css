@@ -1,0 +1,88 @@
+:root {
+  --fundo: #eef2f1;
+  --superficie: #ffffff;
+  --texto: #1d2b2a;
+  --suave: #5b6b69;
+  --borda: #c9d5d3;
+  --destaque: #0f6b5c;
+  --destaque-escuro: #0a5044;
+  --erro: #b3261e;
+  --sucesso: #0f6b5c;
+  --readonly: #f4f7f6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+h1 { margin: 0 0 6px; font-size: 1.6rem; }
+.intro { margin: 0 0 24px; color: var(--suave); line-height: 1.5; }
+
+.campo { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; flex: 1; }
+label { font-weight: 600; font-size: .92rem; }
+
+input {
+  padding: 11px 12px;
+  font-size: 1rem;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: var(--superficie);
+  color: var(--texto);
+  width: 100%;
+}
+input[readonly] { background: var(--readonly); }
+input:focus-visible, button:focus-visible {
+  outline: 3px solid #7cc4b6;
+  outline-offset: 1px;
+}
+
+.linha-cep { display: flex; gap: 12px; align-items: flex-end; }
+.linha-cep .campo { margin-bottom: 0; }
+
+button {
+  padding: 11px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 0;
+  border-radius: 8px;
+  background: var(--destaque);
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+button:hover { background: var(--destaque-escuro); }
+button:disabled { opacity: .6; cursor: wait; }
+
+.mensagem { min-height: 1.4em; margin: 10px 0 16px; font-size: .92rem; font-weight: 500; }
+.mensagem.erro { color: var(--erro); }
+.mensagem.sucesso { color: var(--sucesso); }
+.mensagem.info { color: var(--suave); }
+
+.grade { display: grid; grid-template-columns: 1fr 2fr; gap: 12px; }
+.grade-cidade { grid-template-columns: 3fr 1fr; }
+
+@media (max-width: 480px) {
+  .card { padding: 22px 18px; }
+  .linha-cep { flex-direction: column; align-items: stretch; }
+  .linha-cep .campo { margin-bottom: 0; }
+  .grade, .grade-cidade { grid-template-columns: 1fr; gap: 0; }
+}

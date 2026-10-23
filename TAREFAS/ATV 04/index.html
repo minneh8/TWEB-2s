@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StayEasy — Solicitação de Reserva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>StayEasy</h1>
+      <p>Solicitação de reserva</p>
+    </header>
+
+    <form id="reserva-form" novalidate>
+
+      <div class="form-group">
+        <label for="nome">Nome completo do hóspede</label>
+        <input type="text" id="nome" name="nome" required minlength="5" placeholder="Ex: João Silva">
+        <span class="error-message" id="erro-nome"></span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required placeholder="Ex: maria@gmail.com">
+          <span class="error-message" id="erro-email"></span>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" required placeholder="Ex: 11987654321">
+          <span class="error-message" id="erro-telefone"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="nascimento">Data de nascimento</label>
+        <input type="date" id="nascimento" name="nascimento" required>
+        <span class="error-message" id="erro-nascimento"></span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="checkin">Data de check-in</label>
+          <input type="date" id="checkin" name="checkin" required>
+          <span class="error-message" id="erro-checkin"></span>
+        </div>
+        <div class="form-group">
+          <label for="checkout">Data de check-out</label>
+          <input type="date" id="checkout" name="checkout" required>
+          <span class="error-message" id="erro-checkout"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="hospedes">Quantidade de hóspedes</label>
+        <input type="number" id="hospedes" name="hospedes" required min="1" max="5" placeholder="1 a 5">
+        <span class="error-message" id="erro-hospedes"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="quarto">Tipo de quarto</label>
+        <select id="quarto" name="quarto" required>
+          <option value="">Selecione</option>
+          <option value="Individual">Individual (até 1 pessoa)</option>
+          <option value="Duplo">Duplo (até 2 pessoas)</option>
+          <option value="Família">Família (até 5 pessoas)</option>
+        </select>
+        <span class="error-message" id="erro-quarto"></span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="senha">Senha para acompanhamento da reserva</label>
+          <input type="password" id="senha" name="senha" required minlength="8" placeholder="Mín. 8 caracteres">
+          <span class="error-message" id="erro-senha"></span>
+        </div>
+        <div class="form-group">
+          <label for="confirmarSenha">Confirmação da senha</label>
+          <input type="password" id="confirmarSenha" name="confirmarSenha" required minlength="8">
+          <span class="error-message" id="erro-confirmarSenha"></span>
+        </div>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" id="aceite" name="aceite" required>
+          <span>Declaro que li e concordo com as condições da reserva.</span>
+        </label>
+        <span class="error-message" id="erro-aceite"></span>
+      </div>
+
+      <button type="submit" id="btn-solicitar">Solicitar reserva</button>
+    </form>
+
+    <div id="resultado" class="resultado oculto">
+      <p class="sucesso-msg">✅ Solicitação de reserva realizada com sucesso!</p>
+      <pre id="json-reserva"></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
