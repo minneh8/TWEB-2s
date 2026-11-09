@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/oracledb": "^26.0.1",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "oracledb": "^26.0.0"
+  }
+}
